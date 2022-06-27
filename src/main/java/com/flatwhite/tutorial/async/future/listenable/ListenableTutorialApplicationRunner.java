@@ -20,6 +20,7 @@ public class ListenableTutorialApplicationRunner {
 
     @GetMapping("/listenable")
     public String listenable() throws InterruptedException, ExecutionException {
+
         log.info("listenable()");
         ListenableFuture<String> f = listenableService.hello();
         f.addCallback(s -> log.info(s), ex -> log.info(ex.getMessage()));
