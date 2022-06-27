@@ -18,7 +18,7 @@ public class LoadTest {
         ExecutorService es = Executors.newFixedThreadPool(100);
 
         RestTemplate rt = new RestTemplate();
-        //String url = "http://localhost:8080/callable/async";
+        //String url = "http://localhost:8080/callable/sync";
         String url = "http://localhost:8080/callable/async";
 
         StopWatch main = new StopWatch();
